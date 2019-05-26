@@ -1,0 +1,22 @@
+'use strict'
+
+const express = require('express')
+const bodyParser = require('body-parser')
+
+const app = express()
+const api = require('./routes')
+const cors = require ('cors')
+const morgan = require('morgan')
+
+app.use(cors({origin: '*'}))
+
+app.use(bodyParser.urlencoded({ extended: false}))
+app.use(bodyParser.json())
+
+app.use(morgan('combined'))
+
+app.use('/api/v1', api)
+
+
+
+module.exports = app
