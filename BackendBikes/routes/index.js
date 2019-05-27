@@ -13,9 +13,13 @@ api.post('/bike', BikeCtrl.postBike);
 api.post('/station', StationCtrl.postStation);
 api.post('/stations/addbike', StationCtrl.postStationBike);
 
-//GET
+//GET   
 api.get('/bike', BikeCtrl.getBikes);
 api.get('/station', StationCtrl.getStations);
+api.get('/unassignedbikes', BikeCtrl.getUnassignedBikes);
+
+
+
 
 //DELETE
 api.delete('/bike/delete', BikeCtrl.deleteBike);

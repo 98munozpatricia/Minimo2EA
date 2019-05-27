@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Station Detail</ion-title>
+    <ion-buttons slot="start"> <ion-back-button defaultHref="stations"></ion-back-button> </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-title>Stations</ion-title>
+<ion-list *ngIf="this.bikes">
+  <ion-item *ngFor="let bike of this.bikes">
+     
+      <p>{{bike.name}}   {{bike.description}}   {{bike.kms}}   {{bike.status}} </p>
+      <ion-button (click) = "delete(bike)" >Delete</ion-button>
+  </ion-item>
+</ion-list></ion-content>

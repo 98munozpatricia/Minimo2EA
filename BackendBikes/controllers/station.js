@@ -29,6 +29,7 @@ StationCtrl.getStations = async(req, res) => {
     const allstations = await Station.find()
     res.json(allstations)
 }
+
 StationCtrl.postStationBike= async(req, res)=> {
     try{
         const bikeId = req.body.bikeId;

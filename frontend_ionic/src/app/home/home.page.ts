@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { StationService } from '../services/station.service';
+import { ActivatedRoute } from '@angular/router';
+import { Station } from '../models/station';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +9,15 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor() {}
+  station: Station;
+  
+  constructor(private activatedRoute: ActivatedRoute, private StationService: StationService) {
+    this.station= new Station();
+  }
+  ngOnInit(){
+    this.station._id = "5caf128799d1b20ba9d761e2"
+   
+  }
+  
 
 }
