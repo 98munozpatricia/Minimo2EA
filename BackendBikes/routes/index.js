@@ -17,6 +17,7 @@ api.post('/stations/addbike', StationCtrl.postStationBike);
 api.get('/bike', BikeCtrl.getBikes);
 api.get('/station', StationCtrl.getStations);
 api.get('/unassignedbikes', BikeCtrl.getUnassignedBikes);
+api.get('/bikedetail', BikeCtrl.getBikeDetail);
 
 
 

@@ -12,4 +12,13 @@
       <p>{{bike.name}}   {{bike.description}}   {{bike.kms}}   {{bike.status}} </p>
       <ion-button (click) = "delete(bike)" >Delete</ion-button>
   </ion-item>
-</ion-list></ion-content>
+</ion-list>
+<ion-list *ngIf="this.unbikes">
+    <ion-item *ngFor="let unbike of this.unbikes">
+       
+        <p>{{unbike.name}}   {{unbike.description}}   {{unbike.kms}}   {{unbike.status}} </p>
+        <ion-button (click) = "assign(unbike)" >Assign</ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
