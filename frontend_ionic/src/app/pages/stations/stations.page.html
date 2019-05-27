@@ -5,7 +5,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-title>Stations</ion-title>
+
 <ion-list *ngIf="this.stations">
   <ion-item *ngFor="let station of this.stations">
       <p>{{station.name}} - {{station.state}}</p>
