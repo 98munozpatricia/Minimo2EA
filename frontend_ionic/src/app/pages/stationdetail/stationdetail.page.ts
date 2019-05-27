@@ -35,7 +35,7 @@ export class StationdetailPage implements OnInit {
   assign(unbikes: Object){
     this.data.unbikes = unbikes;
     this.data.addBikeToStation(this.data.bikes._id, this.data.station._id)
-    console.log(this.bikes);
+    console.log(this.unbikes);
   }
   
 }
